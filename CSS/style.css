@@ -10,15 +10,15 @@
     height: 100vh;
     grid-template-areas: 
     "Header Header menu menu"
-    "main main main main"
-    "footer footer footer footer";
+    "main main main main";
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 85% 5%;
+    grid-template-rows: 10% 90%;
 
 }
 
 body{
     position:relative;
+    background-color: burlywood;
 }
 
 .cafeteriafondo{
@@ -78,13 +78,11 @@ body{
 
 .menutdc{
     display: flex;
-    height: 80%;
-    max-width: 50%;
+    max-width: 300px;
     flex-direction: row;
     justify-content: space-between;
     padding: 7px;
     position: static;
-
 }
 
 .cafeteriafotofondo{
@@ -98,14 +96,14 @@ body{
     grid-area: main;
     background-color: burlywood;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .fotobeneficios{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1,5px;
+    width: 100%;
+    max-width: 300px;
 }
 
 
@@ -128,11 +126,11 @@ body{
 .final{
     grid-area: footer;
     background-color:grey;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-top:3px;
     padding-bottom:3px;
-    margin-top: -3;
+    margin-top: 0px;
     width: 100%;
     
 }
@@ -168,3 +166,4 @@ body{
         font-style: italic;
     }
 
+}
