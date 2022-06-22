@@ -1,0 +1,76 @@
+@import "utilities/variables";
+
+body{
+    margin:0;
+    position:relative;
+    background-color: burlywood;
+    .grid-container{
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+        "Header Header menu menu"
+        "main main main main";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10% 90%;
+        .logo{
+            grid-area: Header;
+            background-image: linear-gradient(to bottom, bisque, burlywood);
+            border-bottom: 4px solid brown;
+            #logoImg{
+                height:67px;
+            }
+        }
+
+        .menu{
+            background-image: linear-gradient(to bottom, $color-principal, burlywood);
+            grid-area: menu;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style: none;
+            border-bottom: 4px solid brown;
+            flex-wrap: nowrap;
+            li{
+                list-style: none;
+                padding: 3px;
+                margin:7px;
+                background-color: bisque;
+                border: 1px solid brown;
+                text-transform: uppercase;
+                height: 35px;
+                transition: height 2s;
+                &:hover{
+                    height: 50px;
+                    background-color:cornsilk;
+                    font-style: italic;
+                }
+            }
+        }
+        .cafeteria{
+            grid-area: main;
+            background-color: burlywood;
+            width: 100%;
+            height: auto;
+            display:flex;
+            flex-wrap: wrap;
+            .cafeteriafotofondo{
+                width: 100%;
+                background-size: cover;
+            }
+        }
+
+    }
+    .final{
+        color: #FFFFFF;
+        grid-area: footer;
+        background-color:grey;
+        position: fixed;
+        bottom: 0;
+        padding-top:3px;
+        padding-bottom:3px;
+        margin-top: 0px;
+        width: 100%;
+        display:inline;
+    }
+
+}
