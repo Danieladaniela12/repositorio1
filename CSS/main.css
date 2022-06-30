@@ -15,7 +15,7 @@ body {
       body .grid-container .logo #logoImg {
         height: 67px; }
     body .grid-container .menu {
-      background-image: linear-gradient(to bottom, #e7ce3d, burlywood);
+      background-image: linear-gradient(to bottom, bisque, burlywood);
       grid-area: menu;
       display: flex;
       flex-direction: row;
