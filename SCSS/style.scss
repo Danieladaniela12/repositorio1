@@ -1,9 +1,19 @@
 @import "utilities/variables";
 
+%principio {
+    border-bottom: 4px solid brown;
+    
+}
+
+@mixin estilo ($color){
+    color:$color;
+}
+    
 body{
     margin:0;
     position:relative;
     background-color: burlywood;
+    overflow-x: hidden;
     .grid-container{
         display: grid;
         height: 100vh;
@@ -15,7 +25,7 @@ body{
         .logo{
             grid-area: Header;
             background-image: linear-gradient(to bottom, bisque, burlywood);
-            border-bottom: 4px solid brown;
+            @extend %principio;
             #logoImg{
                 height:67px;
             }
@@ -28,7 +38,7 @@ body{
             flex-direction: row;
             justify-content: center;
             list-style: none;
-            border-bottom: 4px solid brown;
+            @extend %principio;
             flex-wrap: nowrap;
             li{
                 list-style: none;
@@ -72,5 +82,30 @@ body{
         width: 100%;
         display:inline;
     }
+    .final1{
+        @include estilo (blue)
+    }
+}
+
+
 
 }
+
+@media screen and (max-width: 640px) {
+    .grid-container{
+        grid-template-areas: 
+        "Header"
+        "menu"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        height: 100vh;;
+        grid-template-rows: 10% 10% 75% 5%; 
+    
+    }
+
+    .menu li:hover{
+        height: 40px;
+        background-color:cornsilk;
+        font-style: italic;
+    }
