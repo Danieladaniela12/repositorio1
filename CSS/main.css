@@ -1,7 +1,11 @@
+body .grid-container .logo, body .grid-container .menu {
+  border-bottom: 4px solid brown; }
+
 body {
   margin: 0;
   position: relative;
-  background-color: burlywood; }
+  background-color: burlywood;
+  overflow-x: hidden; }
   body .grid-container {
     display: grid;
     height: 100vh;
@@ -10,8 +14,7 @@ body {
     grid-template-rows: 10% 90%; }
     body .grid-container .logo {
       grid-area: Header;
-      background-image: linear-gradient(to bottom, bisque, burlywood);
-      border-bottom: 4px solid brown; }
+      background-image: linear-gradient(to bottom, bisque, burlywood); }
       body .grid-container .logo #logoImg {
         height: 67px; }
     body .grid-container .menu {
@@ -21,7 +24,6 @@ body {
       flex-direction: row;
       justify-content: center;
       list-style: none;
-      border-bottom: 4px solid brown;
       flex-wrap: nowrap; }
       body .grid-container .menu li {
         list-style: none;
@@ -46,6 +48,16 @@ body {
       body .grid-container .cafeteria .cafeteriafotofondo {
         width: 100%;
         background-size: cover; }
+        body .grid-container .cafeteria .cafeteriafotofondo .iconoscontactos {
+          display: flex;
+          flex-direction: column; }
+      body .grid-container .cafeteria .menutdc {
+        transform: scale(2, 1);
+        max-height: 300px;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 7px; }
   body .final {
     color: #FFFFFF;
     grid-area: footer;
@@ -57,3 +69,5 @@ body {
     margin-top: 0px;
     width: 100%;
     display: inline; }
+  body .final1 {
+    color: blue; }
